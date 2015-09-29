@@ -7,6 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>LIDIA</title>
 		<link rel="shortcut icon" href="include/MeIcon.ico" type="image/x-icon">
+		<link href="include/style.css" rel="stylesheet">
+		
 		<!-- Bootstrap CSS -->
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
@@ -56,7 +58,18 @@
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</nav>
-		<h1 class="text-center">Hello World</h1>
+		<div id="contenedor">
+
+			<div id="contenidoP">
+				<!-- <div id="img"> 
+					<img class="yo" src="include/bac1.jpg" alt="Lidia Fernandez">
+				</div> -->
+				<div id="txt">
+					<h1 >Hello World!</h1>
+				</div>
+			</div>
+
+		</div>
 
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>

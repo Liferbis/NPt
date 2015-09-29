@@ -1,0 +1,16 @@
+html{
+	background-image: url("include/bac1.jpg");
+}
+
+img{
+	/*position: center; */
+	margin: 0 auto;
+
+	/*float: left;*/
+}
+
+/*#txt{
+	width: 70%;
+	float: right;
+	text-align: center;
+}*/
