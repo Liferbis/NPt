@@ -1,0 +1,26 @@
+body{
+	background: #000;
+	text-align: center;
+}
+
+.btn{
+	border-radius: 20px;
+	color:#FFF;
+	font-size: 2em;
+
+}
+
+#Lam{
+	background: #4DE21C;
+
+}
+
+#Es{
+	background: #15A9E9;
+
+}
+
+#Vis{
+	background: #D7421F;
+
+}

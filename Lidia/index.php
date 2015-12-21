@@ -61,7 +61,7 @@
 		<div id="contenedor">
 
 			<div id="contenidoP">
-				<!-- <div id="img"> 
+				 <!--<div id="img"> 
 					<img class="yo" src="include/bac1.jpg" alt="Lidia Fernandez">
 				</div> -->
 				<div id="txt">
