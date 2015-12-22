@@ -2,16 +2,17 @@
 require_once "include/BaseDeDatos.php";
 require_once "include/classes.php";
 session_start();
-
+echo $_SESSION["usuario"];
 if ($_SESSION['usuario']=="") {
     header("Location: vistas/VistaLogin.php");
 
 }else if(isset($_POST["login"])){
     $ctv = md5($_POST["ctv"]);
     $veri = BD::verifica($_POST["nombre"], $ctv);
+    echo $veri;
     if($veri == "true"){
         $_SESSION["usuario"]=$_POST["nombre"];
-        header("Location: vistas/VistaPrincipal.php");
+        include ('/vistas/VistaPrincipal.php');
         //echo $_SESSION["usuario"];
     }else{
         header("Location: vistas/VistaLogin.php");
@@ -22,7 +23,10 @@ if ($_SESSION['usuario']=="") {
     
     if (isset($_GET['gestor'])) {
         $gestor = $_GET['gestor'];
-        if ($gestor == "calendario") {
+        if ($gestor == "inicio") {
+            include ('vistas/VistaPrincipal.php');
+
+        } else if ($gestor == "calendario") {
             include ('vistas/VistaCalendario.php');
 
         } else if ($gestor == "gestion") {
@@ -157,7 +161,7 @@ if ($_SESSION['usuario']=="") {
     }else if(isset($_POST["sesion"])){
         if($_POST["sesion"]=="1"){
             session_unset();
-            header('Location: index.php');
+            header('Location: vistas/vistaPrincipal.php');
         }else if($_POST["sesion"]=="0"){
             require_once "vistas/vistaPrincipal.php";
         }

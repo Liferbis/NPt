@@ -14,7 +14,7 @@ class BD {
 	const localhost="localhost";
 	const usu="root";
 	const ctv=""; 
-	const bd="vacaPro";
+	const bd="vacapro";
 
 	public static function conect(){
 		$dwes = new mysqli(BD::localhost, BD::usu , BD::ctv, BD::bd); 
@@ -376,10 +376,12 @@ class BD {
 
 		if(!$acceso){
 			$dwes->close();
+			echo $verifica;
 			return $verifica;
 		}else{
 			$dwes->close();
 			$verifica="true";
+			echo $verifica;
 			return $verifica;
 		}
 	}

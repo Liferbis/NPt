@@ -14,7 +14,7 @@ class BD {
 	const localhost="localhost";
 	const usu="root";
 	const ctv="f437f93010bb5762af6c6bcf4ae28442"; 
-	const bd="vacaciones";
+	const bd="vacapro";
 
 	public static function conect(){
 		$dwes = new mysqli(BD::localhost, BD::usu , BD::ctv, BD::bd);
