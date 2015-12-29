@@ -1,0 +1,25 @@
+body {
+	background:#E0E0E0;
+}
+#contenedor{
+	padding: 30px;
+	text-align: justify;
+	margin: 40px;
+	border: 1px solid #AA4DEB;
+}
+
+#contenedor h1{
+	text-shadow:3px 3px 2px #AA4DEB;
+	color: #000;
+}
+
+@media screen and (max-width:800px ) {
+	#contenedor{
+		padding: 30px;
+		text-align: justify;
+		margin: 0px;
+		border: 0px;
+	}
+
+	
+}

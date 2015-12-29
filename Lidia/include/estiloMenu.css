@@ -6,10 +6,6 @@
 	box-sizing:border-box;
 }
  
-body {
-	background:#E0E0E0;
-}
- 
 header {
 	width:100%;
 }
@@ -32,7 +28,14 @@ header nav ul {
 }
  
 header nav ul li {
+
 	display: inline-block;
+	position: relative;
+}
+
+header nav ul li:hover{
+	background:#AA4DEB;
+	border-radius: 20px;
 }
  
 header nav ul li a {
@@ -43,26 +46,53 @@ header nav ul li a {
 	text-decoration:none;
 }
  
-header nav ul li span {
+header nav ul li a span {
 	margin-right:10px;
 	color: #3FA733;
-	font-size:24px;
-}
-
-header nav ul li a:hover {
-	background:#AA4DEB;
+	font-size:20px;
 }
 
 header nav ul li:hover .sb{
 	display: block;
-	position: relative;
+	/*position: relative;
+	*/
 }
 
 header nav ul li .sb {
 	display:none;
 	position: absolute;
 	background: #4F2465;
+	width: 150%;
+	z-index:1000;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius:  20px;
 }
+
+header nav ul li .sb li{
+	display: block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .sb li a {
+	display: block;
+}
+
+header nav ul li .sb li a span{
+	text-align: right;
+	position: relative;
+	top: 3px;
+	margin-right: 0px;
+	margin-left: 10px;
+}
+
+header nav ul li .caret{
+	position: relative;
+	top: 3px;
+	margin-right: 0px;
+	margin-left: 10px;
+}
+
  
 
 
@@ -102,6 +132,7 @@ https://icomoon.io/app/#/select/font
 		text-decoration:none;
 		font-weight: bold;
 		font-size:25px;
+		border-bottom:1px solid rgba(255,255,255, .3);
 		-webkit-box-sizing:border-box;
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
