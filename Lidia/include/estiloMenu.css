@@ -25,6 +25,7 @@ header nav {
  
 header nav ul {
 	list-style:none;
+	text-align: center;
 }
  
 header nav ul li {
@@ -102,25 +103,15 @@ https://icomoon.io/app/#/select/font
 */
 
 @media screen and (max-width:800px ) {
-	header nav {
-		width:60%;
-		height:100%;
-		left:-100%;
-		margin:0;
-		border-radius: 0px;
-		position: fixed;
+	#na{
+		margin-top: 81px;
 	}
- 
-	header nav ul li {
-		display:block;
-		float:none;
-		border-bottom:1px solid rgba(255,255,255, .3);
-	}
- 
+
 	.menu_bar {
-		/*position: fixed;*/
+		position: fixed;
 		display:block;
 		width:100%;
+		top:0;
 		background:#ccc;
 	}
  
@@ -129,10 +120,11 @@ https://icomoon.io/app/#/select/font
 		padding:20px;
 		background:#7D389D;
 		color:#fff;
+		overflow: hidden;
 		text-decoration:none;
 		font-weight: bold;
 		font-size:25px;
-		border-bottom:1px solid rgba(255,255,255, .3);
+		border-bottom:1px solid rgba(255,255,255, .5);
 		-webkit-box-sizing:border-box;
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
@@ -143,26 +135,52 @@ https://icomoon.io/app/#/select/font
 		font-size:40px;
 		color: #3FA733;
 	}
+
+	header nav {
+		margin-top: 60px;
+		width:60%;
+		height:calc(100% - 81px);
+		left:-100%;
+		margin:0;
+		overflow: scroll;
+		border-radius: 0px;
+		position: fixed;
+	}
+ 
+ 	header nav ul{
+ 		text-align: left;
+ 	}
+
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .5);
+	}
+	
+	header nav ul li:hover {
+		border-radius: 0px;
+	}
+
+	header nav ul li a{
+		display:block;
+		border-radius: 0px;
+	}
+
+	header nav ul li .sb{
+		width: 100%;
+		position: relative;
+		border-radius: 0px;
+	}
+
+	header nav ul li .sb li a{
+		margin-left: 20px;
+	}
+
+	header nav ul li .caret{
+		float: right;
+	}
 }
 
 
 
 
-
-
-.nav{
-
-}
-
-
-/*
-
-CONTENEDOR
-
-*/
-
-#contenedor{
-	display:block;
-	float:left;
-	/*margin-top: 10px;*/
-}

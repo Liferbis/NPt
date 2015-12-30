@@ -1,6 +1,7 @@
 body {
-	background:#E0E0E0;
+	background:#E0E0E0 url('bac1.jpg') no-repeat;
 }
+
 #contenedor{
 	padding: 30px;
 	text-align: justify;
@@ -11,13 +12,20 @@ body {
 #contenedor h1{
 	text-shadow:3px 3px 2px #AA4DEB;
 	color: #000;
+	margin: 10px;
+	text-align: center;
 }
 
 @media screen and (max-width:800px ) {
+	body {
+		background:#E0E0E0 url('bac2.jpg') no-repeat fixed;
+	}
+
 	#contenedor{
 		padding: 30px;
 		text-align: justify;
 		margin: 0px;
+		padding-top: 81px;
 		border: 0px;
 	}
 
