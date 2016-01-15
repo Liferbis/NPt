@@ -1,11 +1,20 @@
 body {
-	background:#E0E0E0 url('bac1.jpg') no-repeat;
+	background: #F2F2F2 url('bac1.jpg') center no-repeat fixed;
+	/*background-image:; 
+	background-repeat:;
+	-webkit-background-size:;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:;*/
 }
 
 #contenedor{
 	padding: 30px;
+	float:left;
 	text-align: justify;
 	margin: 40px;
+	width: 65%;
 	border: 1px solid #AA4DEB;
 }
 
@@ -18,11 +27,22 @@ body {
 
 @media screen and (max-width:800px ) {
 	body {
-		background:#E0E0E0 url('bac2.jpg') no-repeat fixed;
+		/*background-color: #E0E0E0;
+		background-repeat:no-repeat;
+		-webkit-background-size:cover;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+		background-size:cover;
+		background-position:center;*/
+	
 	}
 
+
+
 	#contenedor{
+		background:#F2F2F2 url('music.jpg') no-repeat center fixed;
 		padding: 30px;
+		width: 100%;
 		text-align: justify;
 		margin: 0px;
 		padding-top: 81px;
