@@ -1,5 +1,5 @@
 body {
-	background: #F2F2F2 url('bac1.jpg') center no-repeat fixed;
+	background: #F2F2F2 ;
 	/*background-image:; 
 	background-repeat:;
 	-webkit-background-size:;
@@ -14,7 +14,6 @@ body {
 	float:left;
 	text-align: justify;
 	margin: 40px;
-	width: 65%;
 	border: 1px solid #AA4DEB;
 }
 
@@ -40,7 +39,7 @@ body {
 
 
 	#contenedor{
-		background:#F2F2F2 url('music.jpg') no-repeat center fixed;
+		background:#F2F2F2 ;
 		padding: 30px;
 		width: 100%;
 		text-align: justify;
