@@ -18,9 +18,9 @@ header nav {
 	background:#7D389D;
 	z-index: 1000;
 	max-width:1000px;
-	width:90%;
+	width:95%;
 	margin:20px auto;
-	border-radius: 20px;
+	border-radius: 12px;
 }
  
 header nav ul {
@@ -36,7 +36,7 @@ header nav ul li {
 
 header nav ul li:hover{
 	background:#AA4DEB;
-	border-radius: 20px;
+	border-radius: 12px;
 }
  
 header nav ul li a {
@@ -65,8 +65,8 @@ header nav ul li .sb {
 	background: #4F2465;
 	width: 150%;
 	z-index:1000;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius:  20px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius:  12px;
 }
 
 header nav ul li .sb li{
