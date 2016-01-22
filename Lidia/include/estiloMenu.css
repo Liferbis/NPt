@@ -17,9 +17,9 @@ header {
 header nav {
 	background:#7D389D;
 	z-index: 1000;
-	max-width:1000px;
+	max-width:1500px;
 	width:95%;
-	margin:20px auto;
+	margin:10px auto;
 	border-radius: 12px;
 }
  
@@ -77,6 +77,7 @@ header nav ul li .sb li{
 
 header nav ul li .sb li a {
 	display: block;
+	text-align: left;
 }
 
 header nav ul li .sb li a span{
@@ -102,7 +103,7 @@ http://www.falconmasters.com/web-design/menu-de-navegacion-responsive/
 https://icomoon.io/app/#/select/font
 */
 
-@media screen and (max-width:800px ) {
+@media screen and (max-width:900px ) {
 	#na{
 		margin-top: 81px;
 	}
@@ -174,6 +175,7 @@ https://icomoon.io/app/#/select/font
 
 	header nav ul li .sb li a{
 		margin-left: 20px;
+
 	}
 
 	header nav ul li .caret{
