@@ -15,12 +15,12 @@ header {
 }
  
 header nav {
-	background:#7D389D;
+	background:#c0c0c0;
 	z-index: 1000;
-	max-width:1000px;
-	width:90%;
-	margin:20px auto;
-	border-radius: 20px;
+	max-width:1500px;
+	width:95%;
+	margin:10px auto;
+	border-radius: 12px;
 }
  
 header nav ul {
@@ -36,25 +36,34 @@ header nav ul li {
 
 header nav ul li:hover{
 	background:#AA4DEB;
-	border-radius: 20px;
+	border-radius: 12px;
 }
  
 header nav ul li a {
-	color:#fff;
+	color:#7D389D;
 	padding:20px;
 	display:block;
 	font-size:18px;
 	text-decoration:none;
 }
+
+header nav ul li a:hover{
+	color: #fff;
+}
+
+header nav ul li a:focus{
+	color: #fff;
+}
  
 header nav ul li a span {
 	margin-right:10px;
-	color: #3FA733;
+	color: #7D389D;
 	font-size:20px;
 }
 
 header nav ul li:hover .sb{
 	display: block;
+	color: #fff;
 	/*position: relative;
 	*/
 }
@@ -63,20 +72,23 @@ header nav ul li .sb {
 	display:none;
 	position: absolute;
 	background: #4F2465;
+	color: #fff;
 	width: 150%;
 	z-index:1000;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius:  20px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius:  12px;
 }
 
 header nav ul li .sb li{
 	display: block;
 	overflow: hidden;
+	color:#fff;
 	border-bottom: 1px solid rgba(255,255,255,.5);
 }
 
 header nav ul li .sb li a {
 	display: block;
+	text-align: left;
 }
 
 header nav ul li .sb li a span{
@@ -102,7 +114,7 @@ http://www.falconmasters.com/web-design/menu-de-navegacion-responsive/
 https://icomoon.io/app/#/select/font
 */
 
-@media screen and (max-width:800px ) {
+@media screen and (max-width:900px ) {
 	#na{
 		margin-top: 81px;
 	}
@@ -118,7 +130,7 @@ https://icomoon.io/app/#/select/font
 	.menu_bar .bt-menu {
 		display:block;
 		padding:20px;
-		background:#7D389D;
+		background:#c0c0c0;
 		color:#fff;
 		overflow: hidden;
 		text-decoration:none;
@@ -133,7 +145,7 @@ https://icomoon.io/app/#/select/font
 	.menu_bar span {
 		float:right;
 		font-size:40px;
-		color: #3FA733;
+		color: #7D389D;
 	}
 
 	header nav {
@@ -174,6 +186,7 @@ https://icomoon.io/app/#/select/font
 
 	header nav ul li .sb li a{
 		margin-left: 20px;
+
 	}
 
 	header nav ul li .caret{
