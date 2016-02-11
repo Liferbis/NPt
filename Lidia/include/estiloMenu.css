@@ -6,7 +6,7 @@
 	box-sizing:border-box;
 }
  
-header {
+#header {
 	width:100%;
 }
 
@@ -14,7 +14,7 @@ header {
 	display:none;
 }
  
-header nav {
+#header nav {
 	background:#c0c0c0;
 	z-index: 1000;
 	max-width:1500px;
@@ -23,23 +23,23 @@ header nav {
 	border-radius: 12px;
 }
  
-header nav ul {
+#header nav ul {
 	list-style:none;
 	text-align: center;
 }
  
-header nav ul li {
+#header nav ul li {
 
 	display: inline-block;
 	position: relative;
 }
 
-header nav ul li:hover{
+#header nav ul li:hover{
 	background:#AA4DEB;
 	border-radius: 12px;
 }
  
-header nav ul li a {
+#header nav ul li a {
 	color:#7D389D;
 	padding:20px;
 	display:block;
@@ -47,31 +47,28 @@ header nav ul li a {
 	text-decoration:none;
 }
 
-header nav ul li a:hover{
+#header nav ul li a:hover{
 	color: #fff;
 }
 
-header nav ul li a:focus{
-	color: #fff;
-}
  
-header nav ul li a span {
+#header nav ul li a span {
 	margin-right:10px;
 	color: #7D389D;
 	font-size:20px;
 }
 
-header nav ul li:hover .sb{
+#header nav ul li:hover .sb{
 	display: block;
 	color: #fff;
 	/*position: relative;
 	*/
 }
 
-header nav ul li .sb {
+#header nav ul li .sb {
 	display:none;
 	position: absolute;
-	background: #4F2465;
+	background: #c0c0c0;
 	color: #fff;
 	width: 150%;
 	z-index:1000;
@@ -79,19 +76,19 @@ header nav ul li .sb {
 	border-bottom-left-radius:  12px;
 }
 
-header nav ul li .sb li{
+#header nav ul li .sb li{
 	display: block;
 	overflow: hidden;
 	color:#fff;
 	border-bottom: 1px solid rgba(255,255,255,.5);
 }
 
-header nav ul li .sb li a {
+#header nav ul li .sb li a {
 	display: block;
 	text-align: left;
 }
 
-header nav ul li .sb li a span{
+#header nav ul li .sb li a span{
 	text-align: right;
 	position: relative;
 	top: 3px;
@@ -99,7 +96,7 @@ header nav ul li .sb li a span{
 	margin-left: 10px;
 }
 
-header nav ul li .caret{
+#header nav ul li .caret{
 	position: relative;
 	top: 3px;
 	margin-right: 0px;
@@ -148,7 +145,7 @@ https://icomoon.io/app/#/select/font
 		color: #7D389D;
 	}
 
-	header nav {
+	#header nav {
 		margin-top: 60px;
 		width:60%;
 		height:calc(100% - 81px);
@@ -159,37 +156,37 @@ https://icomoon.io/app/#/select/font
 		position: fixed;
 	}
  
- 	header nav ul{
+ 	#header nav ul{
  		text-align: left;
  	}
 
-	header nav ul li {
+	#header nav ul li {
 		display:block;
 		float:none;
 		border-bottom:1px solid rgba(255,255,255, .5);
 	}
 	
-	header nav ul li:hover {
+	#header nav ul li:hover {
 		border-radius: 0px;
 	}
 
-	header nav ul li a{
+	#header nav ul li a{
 		display:block;
 		border-radius: 0px;
 	}
 
-	header nav ul li .sb{
+	#header nav ul li .sb{
 		width: 100%;
 		position: relative;
 		border-radius: 0px;
 	}
 
-	header nav ul li .sb li a{
+	#header nav ul li .sb li a{
 		margin-left: 20px;
 
 	}
 
-	header nav ul li .caret{
+	#header nav ul li .caret{
 		float: right;
 	}
 }
