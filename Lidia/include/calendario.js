@@ -5,65 +5,78 @@ $(document).ready(function() {
 				center: 'title',
 				right: 'year,month,agendaWeek,agendaDay'
 			},
-			defaultDate: '2015-02-12',
+			defaultDate: '2016-01-01',
 			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2015-02-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2015-02-07',
-					end: '2015-02-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-02-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2015-02-16T16:00:00'
-				},
-				{
-					title: 'Conference',
-					start: '2015-02-11',
-					end: '2015-02-13'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-02-12T10:30:00',
-					end: '2015-02-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2015-02-12T12:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2015-02-12T14:30:00'
-				},
-				{
-					title: 'Happy Hour',
-					start: '2015-02-12T17:30:00'
-				},
-				{
-					title: 'Dinner',
-					start: '2015-02-12T20:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2015-02-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2015-02-28'
-				}
-			]
+			selectable: true,
+			//http://www.jqueryajaxphp.com/fullcalendar-crud-with-jquery-and-php/
+			eventReceive: function(event){
+   				var title = event.title;
+   				var start = event.start.format("YYYY-MM-DD[T]HH:MM:SS");
+   			}
+			// eventLimit: true, // allow "more" link when too many events
+
+			//events guarda la respuesta JSON que nos devuelve la base de datos
+			//http://developer-paradize.blogspot.com.es/2013/06/jquery-fullcalendar-integration-with.html
+			//events: "cal.php";
+			// var title = prompt('Event ambito:'); 
+			// var start = prompt('Event fecha:', "yyyy-MM-dd"); 
+
+			// [
+			// 	{
+			// 		title: 'All Day Event',
+			// 		start: '2015-02-01'
+			// 	},
+			// 	{
+			// 		title: 'Long Event',
+			// 		start: '2015-02-07',
+			// 		end: '2015-02-10'
+			// 	},
+			// 	{
+			// 		id: 999,
+			// 		title: 'Repeating Event',
+			// 		start: '2015-02-09T16:00:00'
+			// 	},
+			// 	{
+			// 		id: 999,
+			// 		title: 'Repeating Event',
+			// 		start: '2015-02-16T16:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Conference',
+			// 		start: '2015-02-11',
+			// 		end: '2015-02-13'
+			// 	},
+			// 	{
+			// 		title: 'Meeting',
+			// 		start: '2015-02-12T10:30:00',
+			// 		end: '2015-02-12T12:30:00'
+			// 	},
+			// 	{
+			// 		title: 'Lunch',
+			// 		start: '2015-02-12T12:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Meeting',
+			// 		start: '2015-02-12T14:30:00'
+			// 	},
+			// 	{
+			// 		title: 'Happy Hour',
+			// 		start: '2015-02-12T17:30:00'
+			// 	},
+			// 	{
+			// 		title: 'Dinner',
+			// 		start: '2015-02-12T20:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Birthday Party',
+			// 		start: '2015-02-13T07:00:00'
+			// 	},
+			// 	{
+			// 		title: 'Click for Google',
+			// 		url: 'http://google.com/',
+			// 		start: '2015-02-28'
+			// 	}
+			// ]
 		});
 
 	// $('#calendar').fullCalendar({
