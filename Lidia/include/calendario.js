@@ -1,171 +1,46 @@
 $(document).ready(function() {
-	$('#calendar').fullCalendar({
+
+	var date = new Date();
+	var d = date.getDate();
+	var m = date.getMonth();
+	var y = date.getFullYear();
+
+	var calendar = $('#calendar').fullCalendar({
+			editable: true,
 			header: {
 				left: 'prev,next today',
 				center: 'title',
-				right: 'year,month,agendaWeek,agendaDay'
+				right: 'year,month,agendaWeek'
 			},
 			defaultDate: '2016-01-01',
-			editable: true,
+			firstDay: 1,
+			weekends: true,
+			defaultEventMinutes:30,
+			monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+			monthNameShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun','Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+			dayNames: ['Domingo', 'Lunes', 'Martes', 'Miercoles','Jueves', 'Viernes', 'Sabado'],
+			dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+			buttonText: {
+				today: 'hoy',
+				year:'año',
+				month: 'mes',
+				week: 'semana',
+				day: 'dia'
+			},
+
+			events: "../include/cal.php",
+
+			eventRender: function(event, element, view){
+				if(event.allDay === "false" || event.allDay === "true"){
+					event.allDay = true;
+				}
+			},
+			
 			selectable: true,
-			//http://www.jqueryajaxphp.com/fullcalendar-crud-with-jquery-and-php/
-			eventReceive: function(event){
-   				var title = event.title;
-   				var start = event.start.format("YYYY-MM-DD[T]HH:MM:SS");
-   			}
-			// eventLimit: true, // allow "more" link when too many events
-
-			//events guarda la respuesta JSON que nos devuelve la base de datos
-			//http://developer-paradize.blogspot.com.es/2013/06/jquery-fullcalendar-integration-with.html
-			//events: "cal.php";
-			// var title = prompt('Event ambito:'); 
-			// var start = prompt('Event fecha:', "yyyy-MM-dd"); 
-
-			// [
-			// 	{
-			// 		title: 'All Day Event',
-			// 		start: '2015-02-01'
-			// 	},
-			// 	{
-			// 		title: 'Long Event',
-			// 		start: '2015-02-07',
-			// 		end: '2015-02-10'
-			// 	},
-			// 	{
-			// 		id: 999,
-			// 		title: 'Repeating Event',
-			// 		start: '2015-02-09T16:00:00'
-			// 	},
-			// 	{
-			// 		id: 999,
-			// 		title: 'Repeating Event',
-			// 		start: '2015-02-16T16:00:00'
-			// 	},
-			// 	{
-			// 		title: 'Conference',
-			// 		start: '2015-02-11',
-			// 		end: '2015-02-13'
-			// 	},
-			// 	{
-			// 		title: 'Meeting',
-			// 		start: '2015-02-12T10:30:00',
-			// 		end: '2015-02-12T12:30:00'
-			// 	},
-			// 	{
-			// 		title: 'Lunch',
-			// 		start: '2015-02-12T12:00:00'
-			// 	},
-			// 	{
-			// 		title: 'Meeting',
-			// 		start: '2015-02-12T14:30:00'
-			// 	},
-			// 	{
-			// 		title: 'Happy Hour',
-			// 		start: '2015-02-12T17:30:00'
-			// 	},
-			// 	{
-			// 		title: 'Dinner',
-			// 		start: '2015-02-12T20:00:00'
-			// 	},
-			// 	{
-			// 		title: 'Birthday Party',
-			// 		start: '2015-02-13T07:00:00'
-			// 	},
-			// 	{
-			// 		title: 'Click for Google',
-			// 		url: 'http://google.com/',
-			// 		start: '2015-02-28'
-			// 	}
-			// ]
-		});
-
-	// $('#calendar').fullCalendar({
-	// 	header: {
-	// 		left: 'prev,next today',
-	// 		center: 'title',
-	// 		right: 'year,month,agendaWeek,agendaDay'
-	// 	},
-	// 	editable: true,
-	// 	disableDragging: true,
-	// 	firstDay: 1,
-	// 	weekends: true,
-	// 	defaultEventMinutes:30,
-	// 	monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio','Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-	// 	monthNameShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun','Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
-	// 	dayNames: ['Domingo', 'Lunes', 'Martes', 'Miercoles','Jueves', 'Viernes', 'Sabado'],
-	// 	dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-	// 	buttonText: {
-	// 	today: 'hoy',
-	// 	year:'año',
-	// 	month: 'mes',
-	// 	week: 'semana',
-	// 	day: 'dia'
-	// 	},
-	// 	allDaySlot: false,
-	// 	allDayText: 'Todo el dia',
-	// 	axisFormat: 'H:mm',
-		
-
-	// 	// defaultDate: '2016-01-12',
-	// 	// editable: true,
-	// 	// eventLimit: true, // allow "more" link when too many events
-	// 	events: [
-	// 		{
-	// 			title: 'Pepito',
-	// 			start: '2016-01-01',
-	// 			end: '2016-01-12'
-	// 		},
-	// 		{
-	// 			title: 'Grillo',
-	// 			start: '2016-01-07',
-	// 			end: '2016-01-11'
-	// 		},
-	// 		{
-	// 			id: 999,
-	// 			title: 'Repeating Event',
-	// 			start: '2016-01-09T16:00:00'
-	// 		},
-	// 		{
-	// 			id: 999,
-	// 			title: 'Repeating Event',
-	// 			start: '2016-01-16T16:00:00'
-	// 		},
-	// 		{
-	// 			title: 'Conference',
-	// 			start: '2016-01-11',
-	// 			end: '2016-01-13'
-	// 		},
-	// 		{
-	// 			title: 'Meeting',
-	// 			start: '2016-01-12T10:30:00',
-	// 			end: '2016-01-12T12:30:00'
-	// 		},
-	// 		{
-	// 			title: 'Lunch',
-	// 			start: '2016-01-12T12:00:00'
-	// 		},
-	// 		{
-	// 			title: 'Meeting',
-	// 			start: '2016-01-12T14:30:00'
-	// 		},
-	// 		{
-	// 			title: 'Happy Hour',
-	// 			start: '2016-01-12T17:30:00'
-	// 		},
-	// 		{
-	// 			title: 'Dinner',
-	// 			start: '2016-01-12T20:00:00'
-	// 		},
-	// 		{
-	// 			title: 'Birthday Party',
-	// 			start: '2016-01-13T07:00:00'
-	// 		},
-	// 		{
-	// 			title: 'Click for Google',
-	// 			url: 'http://google.com/',
-	// 			start: '2016-01-28'
-	// 		}
-	// 	]
-	// });
-		
-});
+			selectHelper: true
+			
+			
+	});
+});			
+	
+	
